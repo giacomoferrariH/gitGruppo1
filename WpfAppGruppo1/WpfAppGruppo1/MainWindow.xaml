@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Label Content="Titolo" HorizontalAlignment="Left" Height="42" Margin="723,17,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label Content="Autore" HorizontalAlignment="Left" Height="42" Margin="723,41,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label Content="Durata" HorizontalAlignment="Left" Height="32" Margin="723,64,0,0" VerticalAlignment="Top" Width="77"/>
+        <Button Content="Crea brano" HorizontalAlignment="Left" Height="34" Margin="476,183,0,0" VerticalAlignment="Top" Width="66" Click="Button_Click"/>
+        <Button Content="Crea CD" HorizontalAlignment="Left" Height="40" Margin="464,117,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label Content="Lista brani" HorizontalAlignment="Left" Height="350" Margin="23,46,0,0" VerticalAlignment="Top" Width="132" FontSize="16" FontFamily="Times New Roman" HorizontalContentAlignment="Center"/>
+        <Button Content="Informazioni Brano" HorizontalAlignment="Left" Height="40" Margin="179,55,0,0" VerticalAlignment="Top" Width="113" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
