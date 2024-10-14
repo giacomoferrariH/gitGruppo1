@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WpfAppGruppo1
 {
-    internal class Brano
+    class Brano
     {
         private string _titolo;
         private string _autore;

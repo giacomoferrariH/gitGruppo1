@@ -3,51 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 
-namespace MusicLibraryApp
+namespace WpfAppGruppo1
 {
-    public class __Brano
-    {
-        public string Titolo { get; set; }
-        public string Autore { get; set; }
-        public int Durata { get; set; }
-
-        public __Brano(string titolo, string autore, int durata)
-        {
-
-        }
-        public override string ToString()
-        {
-            return "";
-        }
-        public bool shortSong(int durata)
-        {
-            return false;
-        }
-    }
-    public class _CD
-    {
-        public string Titolo { get; set; }
-        public string Autore { get; set; }
-        public int Durata { get; set; }
-        public List<__Brano> Brani { get; set; }
-        public _CD(string titolo, string autore, List<__Brano> brani)
-        {
-
-        }
-        public override string ToString()
-        {
-            return "";
-        }
-    }
+    
     public partial class MainWindow : Window
     {
-        private List<__Brano> brani;
-        private _CD cd;
+        private List<Brano> brani;
+        private CD cd;
 
         public MainWindow()
         {
             InitializeComponent();
-            brani = new List<__Brano>();
+            brani = new List<Brano>();
         }
 
         private void BtnAggiungiBrano_Click(object sender, RoutedEventArgs e)
@@ -58,7 +25,7 @@ namespace MusicLibraryApp
 
             if (int.TryParse(txtDurataBrano.Text, out durata))
             {
-                __Brano nuovoBrano = new __Brano(titolo, autore, durata);
+                Brano nuovoBrano = new Brano(titolo, autore, durata);
                 brani.Add(nuovoBrano);
                 lstBrani.Items.Add(nuovoBrano.ToString());
                 txtTitoloBrano.Clear();
@@ -78,7 +45,7 @@ namespace MusicLibraryApp
                 string titoloCD = txtTitoloCD.Text;
                 string autoreCD = txtAutoreCD.Text;
 
-                cd = new _CD(titoloCD, autoreCD, brani);
+                cd = new CD(titoloCD, autoreCD, brani);
                 MessageBox.Show("CD creato con successo!");
                 txtTitoloCD.Clear();
                 txtAutoreCD.Clear();

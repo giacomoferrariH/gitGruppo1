@@ -9,26 +9,20 @@ using System.Threading.Tasks;
 
 namespace WpfAppGruppo1
 {
-    class _Brano
-    {
-        public int Durata { get; set; }
-
-        public string Titolo { get; set; }
-    }
+    
 
 
-
-    internal class CD
+    class CD
     {
         string _titolo;
         string _autore;
-        List<_Brano> _brani; //modificare string con brani
+        List<Brano> _brani; //modificare string con brani
 
-        public CD (string titolo, string autore, List<_Brano> brani)
+        public CD (string titolo, string autore, List<Brano> brani)
         {
             _titolo = titolo;
             _autore = autore;
-            _brani = new List<_Brano>();
+            _brani = new List<Brano>();
             // realloc brani della lista
             for (int i = 0; i < brani.Count; i++)
             {
